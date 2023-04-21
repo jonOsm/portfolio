@@ -4,20 +4,13 @@ export const activeProjects = [
   {
     name: "Simple Blueprint Generation (Web App)",
     description: "Web Application for generation tile-based blueprints.",
-    tags: ["typescript", "next", "tailwind"],
+    tags: ["typescript", "react", "next", "tailwind"],
   },
   {
     name: "Pluto Pizza",
     description:
       "An ecommerce application for ordering from a fictional pizzaria. Note: Pausing dev to rewrite in Next.",
-    tags: [
-      "typescript",
-      "vue",
-      "tailwind",
-      "python",
-      "fast-api",
-      "rewrite-pending",
-    ],
+    tags: ["typescript", "vue", "tailwind", "python", "fast-api"],
   },
   {
     name: "Blueprint Generation Library",
