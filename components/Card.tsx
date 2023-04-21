@@ -45,7 +45,7 @@ export default function Card({ name, description, img, tags }: CardProps) {
             {name}
           </h3>
         </a>
-        <p>{description}</p>
+        <p className="dark:text-white">{description}</p>
 
         <div className="flex flex-wrap gap-1 mt-4">
           {tags.map((t: string) => {
