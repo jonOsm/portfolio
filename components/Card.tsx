@@ -36,8 +36,8 @@ export default function Card({ name, description, img, tags }: CardProps) {
       <div className="rounded-[10px] h-full bg-white p-4 dark:bg-gray-900 sm:p-6">
         {/* Fix: Passing string instead of StaticImageData will break Image*/}
         {img
-          ? <Image className="object-cover mb-2 border-2 rounded h-36 sm:h-48" src={img} placeholder="blur" alt={`Image of project: ${name}`} ></Image>
-          : <div className="bg-gray-300 h-34 sm:h-48"></div>
+          ? <Image className="object-cover mb-3 border-2 rounded h-36 sm:h-48" src={img} placeholder="blur" alt={`Image of project: ${name}`} ></Image>
+          : <div className="flex items-center justify-center mb-3 bg-gray-300 h-34 sm:h-48"> <div className="text-gray-400">{"No Image Available :("}</div></div>
         }
         <a href="#">
           <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">

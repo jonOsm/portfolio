@@ -1,14 +1,18 @@
+import Link from "next/link";
+import A from "./A";
+
 export default function Footer() {
   return (
 
-    <footer className="bg-secondary">
-      <div className="pt-6 mt-12 border-t border-gray-100">
-        <div className="text-center sm:flex sm:justify-between sm:text-left">
-          <p className="mt-4 ml-3 text-sm text-gray-400 sm:order-first sm:mt-0">
-            Crafted using Next.js and Hyper UI
-          </p>
-        </div>
-      </div>
+    <footer className="mt-10 bg-secondary">
+      <p className="w-full pt-8 mx-auto text-sm text-center text-gray-400 sm:order-first sm:mt-0">
+        Crafted using
+        <A href="https://nextjs.org"> Next.js </A> and
+        <A href="http://hyperui.dev"> Hyper UI </A>.
+      </p>
+      <p className="text-xs text-gray-700 opacity-30">
+        {" Pineapple on pizza is an atrocity, don't @ me."}
+      </p>
     </footer>
   )
 }
