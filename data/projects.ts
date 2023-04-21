@@ -1,9 +1,12 @@
-import { CardData } from "@/interfaces"
+import { ProjectData } from "@/interfaces"
+import mapGenImage from "../public/map-gen.png"
 
-export const activeProjects = [
+export const activeProjects: ProjectData[] = [
   {
     name: "Simple Blueprint Generation (Web App)",
     description: "Web Application for generation tile-based blueprints.",
+    // img: "/map-gen.png",
+    img: mapGenImage,
     tags: ["typescript", "react", "next", "tailwind"],
   },
   {
@@ -19,7 +22,7 @@ export const activeProjects = [
   },
 ]
 
-export const completedProjects = [
+export const completedProjects: ProjectData[] = [
   {
     name: "Vessels",
     description:
