@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image"
+import Button from "./Button"
 
 interface CardProps {
   name: string
@@ -32,21 +33,27 @@ export default function Card({ name, description, img, tags }: CardProps) {
   }
 
   return (
-    <article className="sm:w-1/3 rounded-xl bg-gradient-to-tr from-orange-300 via-slate-600 to-cyan-300 p-0.5 shadow-xl transition hover:shadow-sm dark:shadow-gray-700/25">
+    <article className="p-0.5 transition shadow-xl rounded-xl bg-gradient-to-tr from-orange-300 via-slate-600 to-cyan-300 hover:shadow-sm dark:shadow-gray-700/25">
       <div className="rounded-[10px] h-full bg-white p-4 dark:bg-gray-900 sm:p-6">
         {/* Fix: Passing string instead of StaticImageData will break Image*/}
         {img
           ? <Image className="object-cover mb-3 border-2 rounded h-36 sm:h-48" src={img} placeholder="blur" alt={`Image of project: ${name}`} ></Image>
           : <div className="flex items-center justify-center mb-3 bg-gray-300 h-34 sm:h-48"> <div className="text-gray-400">{"No Image Available :("}</div></div>
         }
+        <div className="flex">
+        </div>
         <a href="#">
           <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
-            {" "}
             {name}
           </h3>
         </a>
-        <p className="dark:text-white">{description}</p>
+        <p className="my-2 dark:text-white">{description}</p>
 
+        <div className="flex justify-between w-full gap-1">
+          <Button icon="github" text="View Code" />
+          <Button icon="github" text="View Code" />
+          <Button icon="github" text="View Code" />
+        </div>
         <div className="flex flex-wrap gap-1 mt-4">
           {tags.map((t: string) => {
             return (

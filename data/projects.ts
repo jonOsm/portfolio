@@ -20,6 +20,11 @@ export const activeProjects: ProjectData[] = [
     description: "Library for rendering simple tile-based blueprints.",
     tags: ["typescript"],
   },
+  {
+    name: "Portfolio Website",
+    description: "This site. Yes I'm counting it.",
+    tags: ["typescript", "next", "tailwind", "hyper ui"],
+  },
 ]
 
 export const completedProjects: ProjectData[] = [

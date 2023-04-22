@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <AlertBar />
       <Header />
-      <Component className={martian_mono.variable} {...pageProps} />
+      <Component className={"max-w-screen-xl" + martian_mono.variable} {...pageProps} />
       <Footer />
     </main>
   )
