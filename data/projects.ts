@@ -4,6 +4,8 @@ import mintHomeImage from "../public/mint-homepage.png"
 import googleHomePage from "../public/google-homepage.png"
 import portfolioImage from "../public/recursion-is-fun.png"
 import mapGenLibImage from "../public/map-gen-cli.png"
+import vesselsTitleImage from "../public/vessels_prototype_start_sceen.png"
+import zenThreeImage from "../public/zen-three.png"
 
 export const activeProjects: ProjectData[] = [
   {
@@ -41,12 +43,16 @@ export const activeProjects: ProjectData[] = [
 export const completedProjects: ProjectData[] = [
   {
     name: "Vessels",
+    img: vesselsTitleImage,
     description:
       "A polished prototype exploring implementation of 3D platforming mechanics.",
     tags: ["c#", "unity", "blender"],
   },
   {
     name: "Zen Three",
+    img: zenThreeImage,
+    demoLink: "https://jonosm.itch.io/zen-three",
+    githubLink: "https://github.com/jonOsm/zen-three",
     description:
       "An endless match-3 game designed to relax and lull players to sleep. Intended to explore Game Development in Godot.",
     tags: ["GodotScript", "Godot"],

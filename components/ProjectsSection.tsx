@@ -10,7 +10,6 @@ export default function CardSection({ name, projects }: CardSectionProps) {
 
   const gridSize = 3
   const emptyCells = gridSize - (projects.length % gridSize)
-  console.log(emptyCells)
 
   return (
     <div className="flex flex-col max-w-screen-xl gap-8 px-4 pt-8 pb-3 mx-auto mb-3 sm:px-6 sm:pt-12 sm:pb-0 lg:px-8">
