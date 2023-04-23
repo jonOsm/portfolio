@@ -44,6 +44,8 @@ export const completedProjects: ProjectData[] = [
   {
     name: "Vessels",
     img: vesselsTitleImage,
+    demoLink: "https://jonosm.itch.io/vessels-prototype",
+    githubLink: "https://github.com/jonOsm/Vessels",
     description:
       "A polished prototype exploring implementation of 3D platforming mechanics.",
     tags: ["c#", "unity", "blender"],
