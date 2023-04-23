@@ -1,6 +1,5 @@
-import { ProjectData } from "@/interfaces";
-import { PropsWithChildren } from "react";
-import Card from "./Card";
+import { ProjectData } from "@/interfaces"
+import ProjectCard from "./ProjectCard"
 interface CardSectionProps {
   name: string
   projects: ProjectData[]
@@ -18,17 +17,14 @@ export default function CardSection({ name, projects }: CardSectionProps) {
       <h2 className="font-mono text-2xl font-semibold">{name}</h2>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         {projects.map((c: ProjectData) => (
-          <Card
-            key={c.name}
-            img={c.img}
-            name={c.name}
-            description={c.description}
-            tags={c.tags}
-          />
-        ))
-        }
-        < div className={`sm:col-span-${emptyCells} bg-tertiary rounded-xl flex justify-center items-center font-mono text-black-500 p-5`}> {"Sometimes you just need to fill whitespace. Here's a picture of the family pooch: "}</div>
+          <ProjectCard key={c.name} {...c} />
+        ))}
+        <div
+          className={`hidden sm:flex sm:col-span-${emptyCells} bg-cyan-100 rounded-xl flex justify-center items-center font-mono text-black-500 p-5`}
+        >
+          {"More projects to come!"}
+        </div>
       </div>
-    </div >
-  );
+    </div>
+  )
 }

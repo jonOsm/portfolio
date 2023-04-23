@@ -1,20 +1,30 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+
 interface ButtonProps {
-  icon: string,
+  icon?: IconDefinition
+  link?: string
+  disabled?: boolean
   text: string
 }
-export default function Button({ icon, text }: ButtonProps) {
-  const iconMap = {
-    'github': faGithub
-  }
-
+export default function Button({
+  icon,
+  text,
+  link,
+  disabled = false,
+}: ButtonProps) {
+  disabled = typeof link === "undefined"
+  const colorClasses = disabled
+    ? "bg-gray-300 text-gray-500 pointer-events-none "
+    : "text-white rounded-md bg-secondary hover:bg-cyan-500"
   return (
-    <div className="p-1 border-2 border-black rounded w-30 hover:bg-orange-500">
-      <a href="#">
-        <FontAwesomeIcon icon={faGithub} />
-        <span className="ml-1 text-sm">{text}</span>
-      </a>
-    </div>
+    <a
+      className={`flex items-center justify-center w-full gap-3 p-1 text-sm ${colorClasses}`}
+      href={link}
+      target="_blank"
+    >
+      {icon && <FontAwesomeIcon icon={icon} />}
+      <span className="">{text}</span>
+    </a>
   )
 }
