@@ -6,8 +6,18 @@ import portfolioImage from "../public/recursion-is-fun.png"
 import mapGenLibImage from "../public/map-gen-cli.png"
 import vesselsTitleImage from "../public/vessels_prototype_start_sceen.png"
 import zenThreeImage from "../public/zen-three.png"
+import plutoPizzaImage from "../public/pluto-pizza.png"
 
 export const activeProjects: ProjectData[] = [
+  {
+    name: "Pluto Pizza",
+    description:
+      "An application for ordering from a fictional space pizzaria. My primary focus right now.",
+    tags: ["typescript", "react", "next", "tailwind", "trpc", "daisyui"],
+    img: plutoPizzaImage,
+    demoLink: "https://pluto-pizza-next.vercel.app",
+    githubLink: "https://github.com/jonosm/pluto_pizza_next",
+  },
   {
     name: "Simple Blueprint Generation (Web App)",
     description: "Web Application for generation tile-based blueprints.",
@@ -17,12 +27,7 @@ export const activeProjects: ProjectData[] = [
     img: mapGenAppImage,
     tags: ["typescript", "react", "next", "tailwind"],
   },
-  {
-    name: "Pluto Pizza",
-    description:
-      "An ecommerce application for ordering from a fictional pizzaria. Note: Pausing dev to rewrite in Next.",
-    tags: ["typescript", "vue", "tailwind", "python", "fast-api"],
-  },
+
   {
     name: "Blueprint Generation Library",
     img: mapGenLibImage,
@@ -77,5 +82,14 @@ export const completedProjects: ProjectData[] = [
     description:
       "Recreation of the google search page. Also contributed to landing my frist development role.",
     tags: ["javascript", "css", "html"],
+  },
+]
+
+export const graveyard: ProjectData[] = [
+  {
+    name: "Pluto Pizza (Vue)",
+    description:
+      "An ecommerce application for ordering from a fictional pizzaria. Note: Rewritting in React and Next.",
+    tags: ["typescript", "vue", "tailwind", "python", "fast-api"],
   },
 ]

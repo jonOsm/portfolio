@@ -54,11 +54,9 @@ export default function ProjectCard({
             </div>
           )}
         </div>
-        <a href="#">
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
-            {name}
-          </h3>
-        </a>
+        <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
+          {name}
+        </h3>
         <p className="my-2 dark:text-white">{description}</p>
 
         <div>
